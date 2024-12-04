@@ -1,0 +1,22 @@
+@font-face{
+  font-family: head;
+  src: url(font.otf);
+}
+
+@font-face {
+  font-family: nav;
+  src: url(font2.ttf);
+}
+@font-face {
+  font-family: land;
+  src: url(font3.otf);
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: #1a1a1a;
+  overflow: hidden;
+}

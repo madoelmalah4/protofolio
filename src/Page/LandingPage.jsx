@@ -4,6 +4,7 @@ import Navbar from "../Components/Navbar";
 import { motion } from "framer-motion";
 import AnimatedText from "../Components/AnimatedText";
 import img1 from '../assets/img.jpg'
+import { Parallax , ParallaxLayer } from "@react-spring/parallax";
 const LandingPage = () => {
   const [mouseHover, setMousehover] = useState({
     x: 0,
@@ -35,12 +36,14 @@ const LandingPage = () => {
   };
 
   return (
-    <Stack
-      sx={{
-        width: "100vw",
-        height: "100vh",
-      }}
-    >
+    <Parallax pages={4}>
+      <ParallaxLayer speed={0.3} factor={0} offset={1} >
+      <Stack
+        sx={{
+          width: "100vw",
+          height: "100vh",
+        }}
+      >
       <Navbar />
       <motion.div
         style={{
@@ -78,6 +81,9 @@ const LandingPage = () => {
        />
       </Stack>
     </Stack>
+    </ParallaxLayer>
+
+    </Parallax>
   );
 };
 
